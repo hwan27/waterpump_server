@@ -19,6 +19,7 @@ urlpatterns = [
         "users/",
         include("waterpump.users.urls", namespace="users"),
     ),
+    path("pumps/", include("waterpump.pumps.urls", namespace="pumps")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
 ] + static(

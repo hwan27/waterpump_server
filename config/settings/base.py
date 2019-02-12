@@ -39,7 +39,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
 DATABASES = {
-    'default': env.db('DATABASE_URL', default='postgres:///waterpump'),
+    'default': env.db('DATABASE_URL', default='postgres://postgres:9315@localhost:5432/waterpump_db'),
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
@@ -71,6 +71,7 @@ THIRD_PARTY_APPS = [
 ]
 LOCAL_APPS = [
     'waterpump.users.apps.UsersAppConfig',
+    'waterpump.pumps.apps.PumpsConfig'
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
