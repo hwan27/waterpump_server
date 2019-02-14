@@ -4,9 +4,9 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic import TemplateView
 from django.views import defaults as default_views
+from waterpump import views
 
 urlpatterns = [
-    path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
     path(
         "about/",
         TemplateView.as_view(template_name="pages/about.html"),
@@ -21,6 +21,7 @@ urlpatterns = [
     ),
     path("pumps/", include("waterpump.pumps.urls", namespace="pumps")),
     path("accounts/", include("allauth.urls")),
+    path("", views.ReactAppView.as_view())
     # Your stuff: custom urls includes go here
 ] + static(
     settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
