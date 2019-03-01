@@ -5,6 +5,7 @@ import createHistory from "history/createBrowserHistory";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 import user from "redux/modules/user";
+import cities from "redux/modules/cities";
 import Reactotron from "ReactotronConfig";
 import { i18nState } from "redux-i18n";
 
@@ -21,6 +22,7 @@ if (env === "development") {
 
 const reducer = combineReducers({
   user,
+  cities,
   router: connectRouter(history),
   i18nState
 });

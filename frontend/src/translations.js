@@ -1,5 +1,6 @@
 export const translations = {
   kr: {
-    "Login in": "로그인"
+    "Login in": "로그인",
+    "About us": "우리들"
   }
 };

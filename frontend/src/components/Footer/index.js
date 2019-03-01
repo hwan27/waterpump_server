@@ -6,7 +6,7 @@ const Footer = (props, context) => (
     <div className={styles.column}>
       <nav className={styles.nav}>
         <ul className={styles.list}>
-          <li className={styles.listItem}>About us</li>
+          <li className={styles.listItem}>About us}</li>
           <li className={styles.listItem}>Support</li>
           <li className={styles.listItem}>Blog</li>
           <li className={styles.listItem}>Press</li>
