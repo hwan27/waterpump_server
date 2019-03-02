@@ -74,7 +74,9 @@ const LoadingFeed = props => (
 
 const RenderFeed = props => (
   <div className={styles.feed}>
-    <FeedCity />
+    {props.feed.town_set.map(city => (
+      <FeedCity {...city} key={city.id} />
+    ))}
   </div>
 );
 
