@@ -24,6 +24,7 @@ ul {
 
 @media all and (min-aspect-ratio: 9/16) {
   .list {
+    flex-direction: row;
     padding: 0.5em;
     /* max-width:14/16 */
     margin: 0px auto;

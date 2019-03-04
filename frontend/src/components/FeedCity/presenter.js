@@ -1,19 +1,27 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./styles.module.scss";
-import FeedSector from "components/FeedSector";
+import Sector from "components/Sector";
 
 const FeedCity = (props, context) => {
   return (
     <div id="pattern">
       <ul className={styles.list}>
         <li>
-          <div className={styles.listText}>{props.title}</div>
-          <div className={styles.listText}>{props.sector_set.title}</div>
+          <div className={styles.listText}>
+            <span onClick={() => _clicked(props)}>{props.title} </span>
+          </div>
+
+          <Sector sectors={props.sector_set} />
         </li>
       </ul>
     </div>
   );
+};
+
+const _clicked = props => {
+  Sector.props = props;
+  console.log(Sector.props.sector_set.title);
 };
 
 FeedCity.propTypes = {
