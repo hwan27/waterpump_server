@@ -21,7 +21,7 @@ const FeedCity = (props, context) => {
 
 const _clicked = props => {
   Sector.props = props;
-  console.log(Sector.props.sector_set.title);
+  console.log(Sector.props.sector_set);
 };
 
 FeedCity.propTypes = {
