@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./styles.module.scss";
 
 const Sector = props => (
-  <div>
-    <ul>
+  <div id="pattern">
+    <ul className={styles.list}>
       {props.sectors.map(sector => (
         <Town title={sector.title} key={sector.id} />
       ))}
@@ -12,7 +13,9 @@ const Sector = props => (
 
 const Town = props => (
   <li>
-    <span>{props.title}</span>
+    <div className={styles.listText}>
+      <span>{props.title}</span>
+    </div>
   </li>
 );
 

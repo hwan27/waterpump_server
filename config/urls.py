@@ -18,6 +18,7 @@ urlpatterns = [
     ),
     path("pumps/", include("waterpump.pumps.urls", namespace="pumps")),
     path("accounts/", include("allauth.urls")),
+    path("modems/", include('modems.urls')),
     path("", views.ReactAppView.as_view())
     # Your stuff: custom urls includes go here
 ] + static(
