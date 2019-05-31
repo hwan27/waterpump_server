@@ -54,8 +54,8 @@ class Sector(TimeStampedModel):
     modem_number = models.CharField(max_length=120)  # 모뎀번호
     pump_count = models.CharField(max_length=120)  # 펌프개수
 
-    pressure = models.BooleanField(default=False)  # 흡입압력 표시여부
-    discharge = models.BooleanField(default=False)  # 유량 표시여부
+    pressure = models.CharField(max_length=120, blank=True)  # 흡입압력 표시여부
+    discharge = models.CharField(max_length=120, blank=True)  # 유량 표시여부
     dis_pressure = models.CharField(max_length=120)  # 토출압력
     set_pressure = models.CharField(max_length=120, blank=True)  # 설정압력
 
