@@ -9,20 +9,11 @@ class PumpAdmin(admin.ModelAdmin):
     list_display = (
         'sector',
         'title',  # 카드뷰에 나오는 펌프이름
-        'comstate',  # 통신 상태
-        'name',  # 가입창명
-        'modem_number',  # 모뎀번호
-        'latitude',  # 위도
-        'longitude',  # 경도
-        'pump_count',  # 펌프개수
-        'pressure',  # 흡입압력 표시여부
-
-        'pump_1_freq',  # 1번 펌프 주파수
-        'pump_1_current',  # 1번 펌프 전류
-        'pump_2_freq',  # 2번 펌프 주파수
-        'pump_2_current',  # 2번 펌프 전류
-        'pump_3_freq',  # 3번 펌프 주파수
-        'pump_3_current',  # 3번 펌프 전류
+        'auto',  # 통신 상태
+        'operating_rate',  # 가입창명
+        'current',  # 모뎀번호
+        'freq',  # 위도
+        'power',  # 경도
         'updated_at'
     )
 
@@ -50,4 +41,23 @@ class TownAdmin(admin.ModelAdmin):
 
 @admin.register(models.Sector)
 class SectorAdmin(admin.ModelAdmin):
-    pass
+    list_display = (
+        'town',
+        'title',  # 카드뷰에 나오는 펌프이름
+        'lat',  # 통신 상태
+        'lon',  # 가입창명
+        'modem_number',  # 모뎀번호
+        'pump_count',  # 펌프개수
+        'pressure',  # 흡입압력 표시여부
+        'discharge',  # 유량
+        'dis_pressure',
+        'set_pressure',
+        'water_level',
+        'low_pressure',
+        'pump_open',
+        'pump_1_disorder',
+        'pump_2_disorder',
+        'pump_3_disorder',
+        'pump_4_disorder',
+        'updated_at'
+    )

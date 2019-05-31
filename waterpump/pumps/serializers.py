@@ -21,7 +21,8 @@ class SectorSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.Sector
-        fields = ('title', 'town', 'pump_set')
+        fields = ('title', 'town', 'lat', 'lon', 'modem_number', 'pump_count', 'pressure', 'discharge', 'dis_pressure', 'set_pressure',
+                  'water_level', 'low_pressure', 'pump_open', 'pump_1_disorder', 'pump_2_disorder', 'pump_3_disorder', 'pump_4_disorder', 'pump_set')
 
 
 class TownSerializer(serializers.ModelSerializer):
